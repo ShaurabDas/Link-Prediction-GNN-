@@ -62,8 +62,19 @@ Classes
   - Forward pass on both positive (actual) and negative (sampled) links.
   - Loss computation and backpropagation.
 - Output: Training loss and accuracy for the epoch.
-
 `validate(model, data)`
 - Purpose: Evaluates the model on the validation dataset.
 - Operations: Similar to `train()` but without backpropagation.
 - Output: Validation accuracy.
+
+
+      Main Execution Block
+- Initializes the model and optimizer.
+- Runs training and validation loops, collecting accuracies.
+- Implements early stopping based on validation performance to prevent overfitting.
+- Plots training and validation accuracies over epochs.
+
+  
+      Visualization
+The code plots training and validation accuracies using matplotlib, providing a visual representation of the model's learning progress and effectiveness.
+
